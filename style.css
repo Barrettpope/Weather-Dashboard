@@ -1,0 +1,35 @@
+body {
+    color: #343A3F;
+}
+
+.container {
+    margin-top: 40px;
+    margin-left: 0;
+}
+
+.col-md-4 {
+    padding-right: 65px;
+}
+
+.lead {
+    margin-top: 25px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+hr {
+    border-width: 2px;
+}
+
+.col-md-2 {
+    border: 2px solid #343A3F;
+    padding: 10px 10px 10px 10px;
+    margin-top: 25px;
+    margin-left: 15px;
+    text-align: center;
+    background-color: #88BDBC;
+
+
+}

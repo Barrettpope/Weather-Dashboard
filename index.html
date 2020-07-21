@@ -19,11 +19,76 @@
 </head>
 
 <body>
+    <!-- Navigation Bar -->
     <header>
         <nav class="navbar navbar-dark bg-dark">
             <span class="navbar-brand mb-0 h1"><i class="fas fa-cloud-sun"></i> Weather Dashboard</span>
         </nav>
     </header>
+
+    <!-- Left Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Search for a City:</h5>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter City" aria-label="City Name"
+                        aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="searchButton"><i
+                                class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h1 class="display-6" id="currentCity">Atlanta | <span id="currentDate">07-20-2020 | <i
+                            class="fas fa-cloud-sun"></i></span></h1>
+                <p class="lead">Temperature: <span id="temperature"></span></p>
+                <p class="lead">Humidity: <span id="humidity"></span></p>
+                <p class="lead">Wind Speed: <span id="windSpeed"></span></p>
+                <p class="lead">UV Index: <span id="uvIndex"></span></p>
+                <hr class="my-4">
+                <h1 class="display-6">5-Day Forecast</h1>
+                <div class="row">
+                    <div class="col-md-2">
+                        <h5 id="day1">Day 2</h5>
+                        <hr>
+                        <img id="weatherIcon1">
+                        <p>Temperature: </p>
+                        <p>Humidity: </p>
+                    </div>
+                    <div class="col-md-2">
+                        <h5 id="day2">Day 2</h5>
+                        <hr>
+                        <img id="weatherIcon2">
+                        <p>Temperature: </p>
+                        <p>Humidity: </p>
+                    </div>
+                    <div class="col-md-2">
+                        <h5 id="day3">Day 3</h5>
+                        <hr>
+                        <img id="weatherIcon3">
+                        <p>Temperature: </p>
+                        <p>Humidity: </p>
+                    </div>
+                    <div class="col-md-2">
+                        <h5 id="day4">Day 4</h5>
+                        <hr>
+                        <img id="weatherIcon4">
+                        <p>Temperature: </p>
+                        <p>Humidity: </p>
+                    </div>
+                    <div class="col-md-2">
+                        <h5 id="day5">Day 5</h5>
+                        <hr>
+                        <img id="weatherIcon5">
+                        <p>Temperature: </p>
+                        <p>Humidity: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script type="text/javascript" src="script.js"></script>
