@@ -11,12 +11,12 @@ $(document).ready(function () {
     $("#searchButton").on("click", function () {
         var city = $("#currentCity");
         var userInput = $("#userCity").val();
-        var newSearch = $("<button type=button class=btn-sm>").text(userInput)
+        var newSearch = $("<button type=button id=newSearch class=btn-sm>").text(userInput)
         $(".new-div").append(newSearch);
         city.text(userInput + " | ");
         cityName = userInput;
         if (userInput === newSearch) {
-            display
+
         }
 
         // Current Weather API
@@ -27,13 +27,13 @@ $(document).ready(function () {
 
         }).then(function (response) {
             console.log("This is for general weather ", response);
-            var temp = response.main.temp;
+            var temp = Math.floor((response.main.temp - 273.15) * 1.80 + 32);
             console.log(temp)
-            $('#temperature').append(temp + " degrees Farenheit");
+            $('#temperature').text(temp + " degrees Farenheit");
             var humid = response.main.humidity;
-            $("#humidity").append(humid + "%");
+            $("#humidity").text(humid + "%");
             var ws = response.wind.speed;
-            $("#windSpeed").append(ws + " mph");
+            $("#windSpeed").text(ws + " mph");
             var lat = response.coord.lat;
             var lon = response.coord.lon;
         })
@@ -45,12 +45,19 @@ $(document).ready(function () {
             method: "GET"
 
         }).then(function (response) {
+            for (var i = 0; i < response.list.length; i += 8) {
+                var date1 = response.list[i].dt_txt;
+                var temp1 = Math.floor((response.list[i].main.temp - 273.15) * 1.80 + 32);
+                var humid1 = response.list[i].main.humidity;
+
+                $("#day1").text(date1);
+                $("#tempDay1").text(temp1);
+                $("#humidityDay1").text(humid1);
+            }
 
             console.log("This is for 5 day forecasts ", response);
         })
     })
-
-
 
 });
 
@@ -58,6 +65,6 @@ $(document).ready(function () {
 // Display current date at top
 // Figure out why "&degF" is not working
 // Display UV Index
-// Display 5-day forecast (Possibly 5 for loops needed
+// Display 5-day forecast (Possibly 5 for loops needed)
 // Create conditional statement not diplaying duplicate user inputs
 // Copy AJAX code for city button clicks

@@ -25,13 +25,11 @@ hr {
 
 .col-md-2 {
     border: 2px solid #343A3F;
-    padding: 10px 10px 10px 10px;
+    padding: 5px 5px 5px 5px;
     margin-top: 25px;
     margin-left: 15px;
     text-align: center;
     background-color: #88BDBC;
-
-
 }
 
 .search {
@@ -46,4 +44,14 @@ hr {
     display: block;
     margin-top: 5px;
     text-align: left;
+}
+
+.forecast-temp {
+    text-align: left;
+    font-size: 15px;
+}
+
+.forecast-humidity {
+    text-align: left;
+    font-size: 15px;
 }
