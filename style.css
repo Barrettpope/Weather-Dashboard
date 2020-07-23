@@ -33,3 +33,17 @@ hr {
 
 
 }
+
+.search {
+    margin-top: 5px;
+}
+
+.btn-sm {
+    border: 1px solid #343A3F;
+    color: #343A3F;
+    width: 200px;
+    font-size: 18px;
+    display: block;
+    margin-top: 5px;
+    text-align: left;
+}
