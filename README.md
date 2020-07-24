@@ -20,7 +20,7 @@ Current Weather Tracks:
 Lastly, users have the ability to enter as many cities as they so choose and click on formerly searched cities to re-display city-specific weather data.
 
 ## Visuals
-![](Assets/weather-dashboard.png)
+![](weather-dashboard.png)
 
 ## Link to Deployed Application
 https://barrettpope.github.io/Weather-Dashboard/
